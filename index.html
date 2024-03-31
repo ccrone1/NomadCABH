@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nomad CABH</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="slider.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="./images/mountain_logo.png" alt="NOMAD cbh Logo" />
+        <h1>NOMAD cabh</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="link">Home</a></li>
+          <li><a href="plan.html" class="link">Plan a Trip</a></li>
+          <li><a href="blog.html" class="link">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="plan-teaser">
+      <div class="teaser-content">
+        <h2>Discover Your Next <span class="emphasis">Adventure!</span></h2>
+        <p>Get Out There!</p>
+        <a href="plan.html" class="btn">Plan Your Trip</a>
+      </div>
+    </section>
+
+    <section class="featured-destinations">
+      <h2 class="featured-title">The World is Beautiful!</h2>
+      <div class="image-slider">
+        <div class="slide">
+          <img
+            src="./images/backpack.jpeg"
+            alt="Man hiking with a backpack in the woods"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="./images/beach.jpeg"
+            alt="A surfer in front of a body of water"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="./images/mountain.avif"
+            alt="A village with mountains in the distance"
+          />
+        </div>
+        <div class="slide">
+          <img src="./images/slide1.jpeg" alt="Waterfalls" />
+        </div>
+        <div class="slide">
+          <img
+            src="./images/slide2.webp"
+            alt="A person standing on a paddle board with mountains in the background"
+          />
+        </div>
+        <div class="slide">
+          <img src="./images/slide3.webp" alt="The Aurora Borealis" />
+        </div>
+        <div class="slide">
+          <img
+            src="./images/slide4.webp"
+            alt="A bridge in the forest in the fall"
+          />
+        </div>
+        <div class="slide">
+          <img src="./images/slide5.jpeg" alt="A city skyline" />
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>
+          Get the latest updates and travel tips delivered straight to your
+          inbox.
+        </p>
+        <form action="#" method="post">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Nomad CABH. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // JavaScript for image slider
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide() {
+          slides.forEach((slide) => {
+            slide.style.display = "none";
+          });
+          currentSlide++;
+          if (currentSlide >= slides.length) {
+            currentSlide = 0;
+          }
+          slides[currentSlide].style.display = "block";
+          setTimeout(showSlide, 3000); // Change slide every 3 seconds
+        }
+
+        showSlide();
+      });
+
+      // Add animation class when the page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".teaser-content").classList.add("animate");
+      });
+    </script>
+  </body>
+</html>

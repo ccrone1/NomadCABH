@@ -1,0 +1,232 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d2b48c; /* Set background color for the body */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+    /* CSS for watermark image */
+    background-image: 
+      url('./images/watermark.png');
+    background-repeat: repeat; /* Repeat the watermark images */
+    background-size: 150px auto, 150px auto, 200px auto; /* Set the size of the watermark images */
+    background-position: 
+      20% 20%, /* Position of the first watermark image */
+  }
+
+  header {
+    background-color: #175D77;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Montserrat Alternates', sans-serif; /* Apply Montserrat Alternates font to header */
+    display: flex;
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    width: 70px; /* Adjust the width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between the image and text */
+  }
+  
+  .nav-links {
+    margin: 0; /* Remove default margin */
+
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px; /* Add spacing between navigation links */
+  }
+  
+  .nav-links li:first-child {
+    margin-left: 0; /* Remove margin from the first navigation link */
+  }
+
+  .link {
+    font-size: 17px; /* Adjust font size to match h1 */
+    color: #fff; /* Adjust color to match header text */
+    text-decoration: none; /* Remove underline */
+    /* Add any other styles you want to mimic from h1 */
+}
+
+.link:hover {
+    color: #ccc; /* Adjust hover color if desired */
+}
+  .plan-teaser {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .teaser-content {
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 3s ease, transform 3s ease;
+    font-family: 'Yellowtail', cursive; /* Change the font family here */
+    color: #3A3B3C
+  }
+  
+  .teaser-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .teaser-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .teaser-content .btn {
+    font-family: 'Montserrat Alternates', sans-serif; /* Ensure button uses Roboto font */
+  }
+
+  /* Define the animation for when the hero content enters */
+  .teaser-content.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .teaser-content h2 .emphasis {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #8A6258;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .featured-destinations {
+    padding: 50px 20px;
+  }
+  
+  .featured-destinations h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .featured-title {
+    font-family: 'Yellowtail', cursive; /* Change the font family here */
+    color: #3A3B3C
+}
+  
+/* CSS for slider */
+.image-slider {
+    width: 80vw; /* Set width to 80% of viewport width */
+    height: 80vh; /* Set height to 80% of viewport height */
+    overflow: hidden;
+    position: relative;
+    margin: auto; /* Center the slider horizontally */
+  }
+  
+  .image-slider .slide {
+    display: none;
+    position: absolute;
+    width: 100%; /* Make slides cover the entire width of the container */
+    height: 100%; /* Make slides cover the entire height of the container */
+    left: 0; /* Ensure slides start from the left edge of the container */
+    top: 0; /* Ensure slides start from the top edge of the container */
+  }
+  
+  .image-slider img {
+    width: 100%; /* Make images fill the entire width of the slide */
+    height: 100%; /* Make images fill the entire height of the slide */
+    object-fit: cover; /* Ensure images cover the entire area of the slide */
+    display: block; /* Center the image horizontally */
+    margin: auto; /* Center the image vertically */
+  }
+
+  .newsletter {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+  }
+  
+  .newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif; 
+  }
+  
+  .newsletter-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-content p {
+    margin-bottom: 30px;
+  }
+  
+  .newsletter-content input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .newsletter-content button {
+    background-color: #8A6258;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates', sans-serif; 
+  }
+  
+  footer {
+    background-color: #175D77;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+.content {
+  flex: 1; /* Ensure the content takes up remaining space */
+}
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 120px); /* 100vh - header height (60px) - footer height (60px) */
+  border: 0;
+}
+
+.blog-post {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+.blog-post h2 {
+  color: #333;
+}
+.blog-post p {
+  color: #666;
+}
